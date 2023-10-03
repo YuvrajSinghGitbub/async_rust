@@ -12,6 +12,7 @@ fn main() {
     // send each stream to a seprate thread
     for stream in tcp_stream.incoming() {
         let stream = stream.unwrap();
+        println!("New connection recieved...");
 
         thread::spawn(|| handle_connection(stream));
     }

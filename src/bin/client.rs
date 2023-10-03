@@ -6,6 +6,7 @@ use std::{
 #[allow(unused_variables)]
 fn main() {
     let address = "localhost:8080";
+    println!("Type `:quit` to terminate the connection");
 
     let mut incomming =
         TcpStream::connect(address).expect("\u{1b}[34mFailed to connect to server\u{001b}[0m");
@@ -20,7 +21,6 @@ fn main() {
 
         println!("-\u{001b}[0m");
 
-        println!("test");
         println!("sending message: {buffer}");
         incomming
             .write(buffer.as_bytes())
