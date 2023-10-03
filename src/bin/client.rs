@@ -20,6 +20,7 @@ fn main() {
 
         println!("-\u{001b}[0m");
 
+        println!("test");
         println!("sending message: {buffer}");
         incomming
             .write(buffer.as_bytes())
