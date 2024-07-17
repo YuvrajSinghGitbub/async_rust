@@ -2,6 +2,7 @@ use std::time::Duration;
 use tokio::{join, time};
 
 trait SimpleFuture {
+    // testing git auth
     type Output;
 
     /// This creates a state machine. If future is completed set the state to
